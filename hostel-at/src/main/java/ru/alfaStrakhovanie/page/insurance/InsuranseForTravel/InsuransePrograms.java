@@ -14,8 +14,6 @@ public class InsuransePrograms {
 
     public WebDriver driver;
 
-    // //div[text()=’Тема’]/parent::div
-
     @FindBy (xpath = ".//div[@class = 'calc-parameters-list__item calc-parameters-list__item_countries']/descendant::span[1]")
     WebElement countryOfTraveIP; //Страна, которая отображается на вкладке "Программы страхования"
 

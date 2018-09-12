@@ -6,13 +6,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class InsuranseForTravelersAbroad {
-
+    public static WebDriver driver;
     public InsuranseForTravelersAbroad(WebDriver driver){
         PageFactory.initElements(driver, this);
         this.driver = driver;
     }
 
-    public WebDriver driver;
 
     /**
      *Селекторы для заголовков полей на странице
@@ -31,8 +30,6 @@ public class InsuranseForTravelersAbroad {
 
     @FindBy (xpath = ".//div[text() = 'Укажите активные виды отдыха и спорта']")
     WebElement headerActivity;
-
-
 
     @FindBy (css = "[name = 'vzr-countries-input']")
     WebElement countryInput; //Селектор для указания страны
@@ -53,13 +50,10 @@ public class InsuranseForTravelersAbroad {
     WebElement durationOfTrip; // Селектор для длительности поездки
 
     @FindBy (xpath = ".//div[@class ='numbered-fields']")
-    WebElement birthdayUserInput; //Селектор для даты рождения участников поездки
+    public WebElement birthdayUserInput; //Селектор для даты рождения участников поездки
 
     @FindBy (xpath = ".//div[text() = 'Добавить участника']")
     WebElement addUser;
-
-    @FindBy (name = "numbered-fields__delete js-vzr-delete-person")
-    WebElement deleteBirthdayUser; //Селектор для знака удаления дня рождения пользователя
 
     @FindBy (name = "vzr-sport-input")
     WebElement activityInput; //
@@ -92,8 +86,6 @@ public class InsuranseForTravelersAbroad {
     public void setCalendarEndInput(String value) { calendarEndInput.sendKeys(value); }
 
     public String setDurationOfTrip() { return durationOfTrip.getText(); }
-
-    public void setBirthdayUserFirstInput(String value) { birthdayUserFirstInput.sendKeys(value);}
 
     public void clickAddUser() { addUser.click(); }
 
