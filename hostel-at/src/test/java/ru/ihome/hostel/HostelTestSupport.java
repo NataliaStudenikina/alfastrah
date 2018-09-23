@@ -16,6 +16,11 @@ public class HostelTestSupport {
     /**
      * Комментарии для git
      */
+
+
+    /**
+     *Очередной новый комментарий
+     */
     public HostelTestSupport() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         driver = new ChromeDriver();
