@@ -13,7 +13,9 @@ public class HostelTestSupport {
      InsuranseForTravelersAbroad insuranseForTravelersAbroad = new InsuranseForTravelersAbroad(driver );
 //    MembersBirthdayPicker membersBirthdayPicker = new MembersBirthdayPicker(insuranseForTravelersAbroad.birthdayUserInput);
 
-
+    /**
+     * Комментарии для git
+     */
     public HostelTestSupport() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         driver = new ChromeDriver();
